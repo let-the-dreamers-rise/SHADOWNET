@@ -87,7 +87,7 @@ const Dashboard: React.FC = () => {
       <div className="grid">
         <DramaFeed drama={drama} />
         <AgentsTable agents={agents} />
-        <ActivityFeed activity={activity} />
+        <ActivityFeed activity={activity} agents={agents} />
         <Leaderboards data={leaderboards} />
       </div>
     </div>

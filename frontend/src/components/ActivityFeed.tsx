@@ -10,13 +10,30 @@ interface Transaction {
   timestamp: number;
 }
 
-interface ActivityFeedProps {
-  activity: Transaction[];
+interface Agent {
+  id: string;
+  name: string;
 }
 
-const ActivityFeed: React.FC<ActivityFeedProps> = ({ activity }) => {
+interface ActivityFeedProps {
+  activity: Transaction[];
+  agents?: Agent[];
+}
+
+const ActivityFeed: React.FC<ActivityFeedProps> = ({ activity, agents = [] }) => {
   const prevActivityRef = useRef<Transaction[]>([]);
   const [newIds, setNewIds] = React.useState<Set<string>>(new Set());
+
+  // Create a map of agent IDs to names for quick lookup
+  const agentNameMap = React.useMemo(() => {
+    const map = new Map<string, string>();
+    agents.forEach(agent => map.set(agent.id, agent.name));
+    return map;
+  }, [agents]);
+
+  const getAgentName = (id: string) => {
+    return agentNameMap.get(id) || id.substring(0, 8);
+  };
 
   useEffect(() => {
     const prevIds = new Set(prevActivityRef.current.map(t => t.id));
@@ -45,19 +62,22 @@ const ActivityFeed: React.FC<ActivityFeedProps> = ({ activity }) => {
   };
 
   const getActivityMessage = (tx: Transaction) => {
+    const fromName = getAgentName(tx.from);
+    const toName = getAgentName(tx.to);
+    
     if (!tx.action) {
-      return `${tx.from} → ${tx.to}: ${tx.amount} credits`;
+      return `${fromName} → ${toName}: ${tx.amount} credits`;
     }
     if (tx.action === 'hire') {
-      return `${tx.from} hired ${tx.to} for ${tx.amount} credits`;
-    } else if (tx.action === 'trade') {
-      return `${tx.from} traded with ${tx.to} for ${tx.amount} credits`;
+      return `${fromName} hired ${toName} for ${tx.amount} credits`;
+    } else if (tx.action === 'trade' || tx.action === 'trade_resources') {
+      return `${fromName} traded with ${toName} for ${tx.amount} credits`;
     } else if (tx.action === 'risky_deal') {
-      return `${tx.from} attempted risky deal with ${tx.to} for ${tx.amount} credits`;
+      return `${fromName} attempted risky deal with ${toName} for ${tx.amount} credits`;
     } else if (tx.action === 'invest') {
-      return `${tx.from} invested ${tx.amount} credits`;
+      return `${fromName} invested ${tx.amount} credits`;
     } else {
-      return `${tx.from} → ${tx.to}: ${tx.amount} credits (${formatAction(tx.action)})`;
+      return `${fromName} → ${toName}: ${tx.amount} credits (${formatAction(tx.action)})`;
     }
   };
 
