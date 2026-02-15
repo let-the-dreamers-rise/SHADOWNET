@@ -166,26 +166,44 @@ shadownet/
 ### Backend Deployment (Render)
 
 1. Create a new Web Service on Render
-2. Connect your GitHub repository
+2. Connect your GitHub repository: `https://github.com/let-the-dreamers-rise/SHADOWNET`
 3. Configure build settings:
    - Build Command: `npm install && npm run build`
    - Start Command: `npm start`
+   - Root Directory: Leave blank (uses repository root)
 4. Add environment variables in Render dashboard:
-   - `LLM_PROVIDER`
-   - `LLM_API_KEY`
-   - `FRONTEND_URL` (your Vercel URL)
-5. Deploy!
+   - `LLM_PROVIDER=gemini` (or `openai`)
+   - `LLM_API_KEY=your_gemini_api_key_here`
+   - `FRONTEND_URL=https://your-app.vercel.app` (add after frontend deployment)
+   - `NODE_VERSION=18` (optional, ensures correct Node version)
+5. Deploy and wait for build to complete!
+6. Copy your Render URL (e.g., `https://shadownet.onrender.com`)
 
 ### Frontend Deployment (Vercel)
 
+**Option 1: Vercel CLI**
 1. Install Vercel CLI: `npm i -g vercel`
 2. Navigate to frontend directory: `cd frontend`
 3. Run: `vercel`
 4. Follow prompts to deploy
 5. Set environment variable in Vercel dashboard:
-   - `VITE_API_URL` (your Render backend URL + `/api`)
+   - `VITE_API_URL=https://your-render-url.onrender.com/api`
 
-Alternatively, connect your GitHub repo to Vercel for automatic deployments.
+**Option 2: GitHub Integration (Recommended)**
+1. Go to [vercel.com](https://vercel.com) and sign in
+2. Click "Add New Project"
+3. Import your GitHub repository: `let-the-dreamers-rise/SHADOWNET`
+4. Configure project:
+   - Framework Preset: Vite
+   - Root Directory: `frontend`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+5. Add environment variable:
+   - Name: `VITE_API_URL`
+   - Value: `https://your-render-url.onrender.com/api`
+6. Deploy!
+
+**Important**: After frontend deployment, go back to Render and update the `FRONTEND_URL` environment variable with your Vercel URL for CORS.
 
 ## Demo
 
