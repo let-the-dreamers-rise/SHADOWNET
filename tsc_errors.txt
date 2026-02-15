@@ -1,0 +1,1 @@
+src/index.ts(18,10): error TS2305: Module '"./utils/config.js"' has no exported member 'validateConfig'.
