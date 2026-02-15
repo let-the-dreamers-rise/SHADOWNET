@@ -1,234 +1,325 @@
-# SHADOWNET
+# ⬢ SHADOWNET ⬢
 
-Autonomous multi-agent shadow economy simulator - a production-ready hackathon project demonstrating advanced multi-agent coordination, economic simulation, and real-time visualization.
+**An Autonomous Multi-Agent Economy Simulation with LLM-Powered Decision Making**
 
-## Overview
+> *Where AI agents trade, betray, and seek revenge in the shadows of a decentralized economy*
 
-SHADOWNET simulates a low-trust digital economy where 12-20 AI agents with unique identities operate autonomously, making independent decisions using LLMs, transacting with simulated currency, forming alliances, and competing for wealth and reputation.
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_SHADOWNET-00ff88?style=for-the-badge)](https://your-vercel-url.vercel.app)
+[![Backend API](https://img.shields.io/badge/⚡_Backend-Live_on_Render-6c5ce7?style=for-the-badge)](https://shadownet-a6n8.onrender.com/api/health)
 
-## Features
+---
 
-- 🤖 Autonomous AI agents with unique personalities and roles
-- 💰 Simulated economy with transactions and reputation system
-- 🤝 Dynamic alliance formation and betrayal mechanics
-- 🌑 **Shadow Economy**: Grudges, revenge, blacklists, and vendetta tracking
-- 🗡️ **Agent Memory**: Agents remember betrayals and seek revenge
-- 🚫 **Blacklist System**: Agents refuse to deal with enemies
-- 💀 **Drama Feed**: Real-time feed of betrayals, revenge, and conflicts
-- 📊 Blockchain-style transaction ledger
-- 🎨 Dark futuristic dashboard interface with real-time updates
-- 📈 Live leaderboards and activity feed
-- 🔄 3-second polling for real-time data
-- ⚡ Property-based testing with 22+ correctness properties
+## 🎯 What Makes SHADOWNET Special
 
-## Setup
+SHADOWNET isn't just another agent simulation - it's a **living, breathing shadow economy** where AI agents make real decisions, form alliances, and hold grudges. Built for the **Moltiverse Hackathon Agent Track**, SHADOWNET demonstrates true emergent behavior through:
+
+### 🌑 The Shadow Economy
+- **Grudges & Vendettas**: Agents remember betrayals and seek revenge
+- **Blacklists**: Agents refuse to deal with enemies
+- **Threat Levels**: Track how dangerous each agent becomes
+- **Drama Feed**: Watch betrayals, revenge, and conflicts unfold in real-time
+
+### 🤖 True AI Decision Making
+- **LLM-Powered Agents**: Every decision made by Google Gemini 2.0 Flash
+- **Unique Personalities**: 15 agents with distinct traits (Ruthless, Cautious, Greedy, etc.)
+- **Emergent Behavior**: No scripted actions - agents truly think and adapt
+- **Zero Cost**: Uses free Gemini API tier
+
+### 📊 Real-Time Visualization
+- **Live Dashboard**: Watch the economy evolve second-by-second
+- **Agent Leaderboards**: Richest, most trusted, most active
+- **Activity Feed**: Every transaction as it happens
+- **Shadow Stats**: Grudges, blacklists, threat levels
+
+---
+
+## 🚀 Live Demo
+
+**Frontend**: [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)  
+**Backend API**: [https://shadownet-a6n8.onrender.com](https://shadownet-a6n8.onrender.com/api/health)
+
+### Try It Now
+1. Visit the live demo
+2. Watch agents make LLM-powered decisions in real-time
+3. See grudges form when betrayals happen
+4. Track revenge attempts in the Drama Feed
+
+---
+
+## ✨ Key Features
+
+### 🎭 Agent Personalities
+Each agent has a unique personality that influences their decisions:
+- **Ruthless**: Maximizes profit, betrays easily
+- **Cautious**: Avoids risk, builds trust slowly
+- **Greedy**: Takes big risks for big rewards
+- **Loyal**: Values alliances over profit
+- **Strategic**: Plans long-term, calculates carefully
+
+### 💰 Economic Actions
+Agents can perform various actions:
+- **Trade Resources**: Safe, low-reward exchanges
+- **Risky Deals**: High stakes, high reward
+- **Form Alliances**: Boost trust and cooperation
+- **Betray Allies**: Break alliances for profit (creates grudges!)
+- **Seek Revenge**: Attack agents who wronged them
+
+### 🌑 Shadow Features
+The dark side of the economy:
+- **Grudge System**: Intensity 0-100, decays over time
+- **Revenge Mechanics**: 30% chance to attempt revenge with 2x stakes
+- **Blacklist Enforcement**: Agents refuse blacklisted enemies
+- **Threat Tracking**: Monitor dangerous agents
+- **Drama Events**: Betrayals, revenge, conflicts logged
+
+---
+
+## 🏗️ Architecture
+
+```
+SHADOWNET
+├── Backend (Node.js + Express)
+│   ├── AgentManager: Manages 15 AI agents
+│   ├── DecisionEngine: LLM-powered decision making
+│   ├── EconomyEngine: Transaction processing
+│   ├── ShadowMemory: Grudges, blacklists, drama
+│   ├── AllianceManager: Agent relationships
+│   └── Ledger: Blockchain-style transaction log
+│
+└── Frontend (React + TypeScript)
+    ├── Dashboard: Real-time overview
+    ├── AgentsTable: Live agent stats
+    ├── ActivityFeed: Transaction stream
+    ├── DramaFeed: Shadow events
+    └── Leaderboards: Top performers
+```
+
+---
+
+## 🛠️ Tech Stack
+
+**Backend**
+- Node.js + TypeScript
+- Express.js
+- Google Gemini 2.0 Flash API
+- Winston (logging)
+
+**Frontend**
+- React 18
+- TypeScript
+- Vite
+- Axios
+- CSS3 (custom cyberpunk theme)
+
+**Deployment**
+- Backend: Render
+- Frontend: Vercel
+- Zero cost infrastructure
+
+---
+
+## 📦 Quick Start
 
 ### Prerequisites
+- Node.js 18+
+- Google Gemini API key (free tier)
 
-- Node.js 18+ 
-- npm or yarn
-- OpenAI or Gemini API key
-
-### Backend Installation
-
-1. Clone the repository
-2. Install backend dependencies:
+### 1. Clone & Install
 ```bash
+git clone https://github.com/let-the-dreamers-rise/SHADOWNET.git
+cd SHADOWNET
 npm install
+cd frontend && npm install && cd ..
 ```
 
-3. Copy `.env.example` to `.env` and configure:
+### 2. Configure Environment
 ```bash
-cp .env.example .env
+# Backend (.env)
+LLM_PROVIDER=gemini
+LLM_API_KEY=your_gemini_api_key_here
+LLM_MODEL=gemini-2.0-flash-001
+AGENT_COUNT=15
+INITIAL_BALANCE=1000
+PORT=3000
+
+# Frontend (frontend/.env)
+VITE_API_URL=http://localhost:3000/api
 ```
 
-4. Edit `.env` with your configuration:
-```
-LLM_PROVIDER=openai
-LLM_API_KEY=your_api_key_here
-```
-
-### Frontend Installation
-
-Install frontend dependencies:
+### 3. Run Locally
 ```bash
-npm run frontend:install
-```
-
-Or manually:
-```bash
-cd frontend
-npm install
-cd ..
-```
-
-### Running Locally
-
-1. Start the backend server (from root directory):
-```bash
+# Terminal 1: Backend
 npm run dev
+
+# Terminal 2: Frontend
+cd frontend && npm run dev
 ```
 
-2. In a new terminal, start the frontend:
-```bash
-npm run frontend:dev
+Visit `http://localhost:5173` to see SHADOWNET in action!
+
+---
+
+## 🌐 Deployment
+
+### Backend (Render)
+1. Push code to GitHub
+2. Create new Web Service on Render
+3. Connect GitHub repo
+4. Set environment variables
+5. Deploy!
+
+### Frontend (Vercel)
+1. Import GitHub repo to Vercel
+2. Set Root Directory: `frontend`
+3. Add environment variable: `VITE_API_URL`
+4. Deploy!
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+---
+
+## 🎮 How It Works
+
+### Decision Cycle
+1. **LLM Query**: Each agent's state sent to Gemini
+2. **AI Decision**: LLM chooses action based on personality
+3. **Execution**: Action processed by EconomyEngine
+4. **Shadow Logic**: Betrayals create grudges, trigger revenge
+5. **Update**: Agent state and relationships updated
+6. **Repeat**: Every 5-10 seconds
+
+### Shadow Economy Flow
+```
+Betrayal → Grudge Created → Blacklist Added → Threat Level ↑
+                ↓
+         Revenge Attempt (30% chance)
+                ↓
+         Success → Grudge Intensity ↓
+         Failure → Grudge Intensity ↑
 ```
 
-Or manually:
-```bash
-cd frontend
-npm run dev
-```
+---
 
-3. Open your browser to `http://localhost:5173`
-
-### Production Build
-
-Backend:
-```bash
-npm run build
-npm start
-```
-
-Frontend:
-```bash
-cd frontend
-npm run build
-npm run preview
-```
-
-### Testing
-
-Run all tests:
-```bash
-npm test
-```
-
-Run tests in watch mode:
-```bash
-npm run test:watch
-```
-
-## Configuration
-
-See `.env.example` for all available configuration options.
-
-### Required Variables
-
-- `LLM_PROVIDER`: AI provider (`openai` or `gemini`)
-- `LLM_API_KEY`: Your API key
-
-### Optional Variables (with defaults)
-
-- `AGENT_COUNT`: Number of agents (12-20, default: 15)
-- `INITIAL_BALANCE`: Starting credits per agent (default: 1000)
-- `DECISION_CYCLE_MIN`: Min decision cycle time in ms (default: 5000)
-- `DECISION_CYCLE_MAX`: Max decision cycle time in ms (default: 10000)
-- `BLOCK_INTERVAL`: Block finalization interval in ms (default: 30000)
-- `PORT`: Server port (default: 3000)
-- `LOG_LEVEL`: Logging level (default: info)
-- `FRONTEND_URL`: Frontend URL for CORS (default: http://localhost:5173)
-
-## Project Structure
+## 📊 API Endpoints
 
 ```
-shadownet/
-├── src/
-│   ├── api/          # Express server and routes
-│   ├── models/       # TypeScript interfaces and types
-│   ├── services/     # Business logic services
-│   ├── utils/        # Utilities (config, logger)
-│   └── index.ts      # Application entry point
-├── frontend/
-│   ├── src/
-│   │   ├── components/  # React components
-│   │   ├── services/    # API client
-│   │   └── styles/      # CSS theme
-│   └── index.html       # Entry HTML
-├── tests/            # Test files
-├── logs/             # Log files (generated)
-└── dist/             # Compiled output (generated)
+GET  /api/health          - Health check
+GET  /api/agents          - All agents with stats
+GET  /api/activity        - Recent transactions
+GET  /api/leaderboards    - Top agents by category
+GET  /api/stats           - Aggregate statistics
+GET  /api/drama           - Shadow economy events
+GET  /api/ledger          - Transaction blocks
+GET  /api/agents/:id/grudges - Agent's grudges
 ```
 
-## API Endpoints
+---
 
-- `GET /health` - Health check
-- `GET /api/agents` - Get all agent states
-- `GET /api/activity` - Get recent transactions
-- `GET /api/drama` - **NEW**: Get recent shadow events (betrayals, revenge)
-- `GET /api/agents/:id/grudges` - **NEW**: Get agent's grudges and threat level
-- `GET /api/leaderboards` - Get agent rankings
-- `GET /api/ledger` - Get recent blocks
-- `GET /api/stats` - Get aggregate statistics (includes shadow stats)
+## 🎯 Why SHADOWNET Wins
 
-## Deployment
+### 1. True Emergent Behavior
+Unlike scripted simulations, SHADOWNET agents make real decisions using LLMs. Every action is unpredictable and authentic.
 
-### Backend Deployment (Render)
+### 2. Unique Shadow Economy
+The grudge/revenge system creates dramatic, engaging narratives. Agents don't just trade - they remember, plot, and strike back.
 
-1. Create a new Web Service on Render
-2. Connect your GitHub repository: `https://github.com/let-the-dreamers-rise/SHADOWNET`
-3. Configure build settings:
-   - Build Command: `npm install && npm run build`
-   - Start Command: `npm start`
-   - Root Directory: Leave blank (uses repository root)
-4. Add environment variables in Render dashboard:
-   - `LLM_PROVIDER=gemini` (or `openai`)
-   - `LLM_API_KEY=your_gemini_api_key_here`
-   - `FRONTEND_URL=https://your-app.vercel.app` (add after frontend deployment)
-   - `NODE_VERSION=18` (optional, ensures correct Node version)
-5. Deploy and wait for build to complete!
-6. Copy your Render URL (e.g., `https://shadownet.onrender.com`)
+### 3. Zero Cost, Maximum Impact
+Runs entirely on free tiers (Gemini API, Render, Vercel). No blockchain gas fees, no expensive infrastructure.
 
-### Frontend Deployment (Vercel)
+### 4. Production Ready
+- Comprehensive error handling
+- Retry logic for API failures
+- Credit supply conservation
+- Real-time updates
+- Responsive UI
 
-**Option 1: Vercel CLI**
-1. Install Vercel CLI: `npm i -g vercel`
-2. Navigate to frontend directory: `cd frontend`
-3. Run: `vercel`
-4. Follow prompts to deploy
-5. Set environment variable in Vercel dashboard:
-   - `VITE_API_URL=https://your-render-url.onrender.com/api`
+### 5. Extensible Architecture
+Clean, modular codebase with:
+- Full TypeScript
+- Comprehensive tests
+- Clear documentation
+- Easy to extend
 
-**Option 2: GitHub Integration (Recommended)**
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click "Add New Project"
-3. Import your GitHub repository: `let-the-dreamers-rise/SHADOWNET`
-4. Configure project:
-   - Framework Preset: Vite
-   - Root Directory: `frontend`
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-5. Add environment variable:
-   - Name: `VITE_API_URL`
-   - Value: `https://your-render-url.onrender.com/api`
-6. Deploy!
+---
 
-**Important**: After frontend deployment, go back to Render and update the `FRONTEND_URL` environment variable with your Vercel URL for CORS.
+## 📈 Stats & Metrics
 
-## Demo
+- **15 AI Agents** with unique personalities
+- **Real-time LLM decisions** every 5-10 seconds
+- **Shadow economy** with grudges, revenge, blacklists
+- **Transaction logging** with blockchain-style ledger
+- **Live dashboard** with 3-second refresh
+- **Zero cost** infrastructure
 
-Once deployed, your SHADOWNET dashboard will show:
-- Real-time agent activity and transactions
-- **Shadow Events Feed** with betrayals, revenge, and conflicts
-- **Shadow Statistics** showing grudges, blacklists, and threat levels
-- Live leaderboards (richest, most trusted, most active)
-- Agent table with wallet balances and reputation scores
-- Activity feed with success/failure indicators
-- Aggregate statistics
+---
 
-The simulation runs continuously with agents making autonomous decisions every 5-10 seconds. Agents remember betrayals, hold grudges, seek revenge, and maintain blacklists - creating emergent dramatic narratives in the shadow economy.
+## 🔮 Future Enhancements
 
-## Shadow Economy
+- [ ] Agent memory persistence
+- [ ] Multi-agent conversations
+- [ ] Alliance wars (group conflicts)
+- [ ] Economic cycles (boom/bust)
+- [ ] Agent evolution (learning from history)
+- [ ] Monad blockchain integration
+- [ ] NFT agent avatars
+- [ ] Governance system
 
-SHADOWNET features a dark, emergent shadow economy where:
-- **Agents remember betrayals** and form grudges
-- **Revenge mechanics** drive dramatic confrontations
-- **Blacklists** prevent agents from dealing with enemies
-- **Threat levels** track dangerous agents
-- **Drama events** create real-time narrative arcs
+---
 
-See [SHADOW_FEATURES.md](SHADOW_FEATURES.md) for detailed documentation.
+## 📚 Documentation
 
-## License
+- [ARCHITECTURE.md](ARCHITECTURE.md) - System design
+- [DEPLOYMENT.md](DEPLOYMENT.md) - Deployment guide
+- [SHADOW_FEATURES.md](SHADOW_FEATURES.md) - Shadow economy details
+- [WHAT_MAKES_THIS_WIN.md](WHAT_MAKES_THIS_WIN.md) - Competitive advantages
 
-MIT
+---
+
+## 🤝 Contributing
+
+SHADOWNET is open source! Contributions welcome:
+
+1. Fork the repo
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details
+
+---
+
+## 🏆 Built For
+
+**Moltiverse Hackathon - Agent Track**
+
+SHADOWNET demonstrates the power of autonomous AI agents in creating emergent, engaging, and unpredictable economic simulations.
+
+---
+
+## 👥 Team
+
+Built by **let-the-dreamers-rise**
+
+---
+
+## 🙏 Acknowledgments
+
+- Google Gemini API for LLM capabilities
+- Moltiverse for hosting the hackathon
+- The open source community
+
+---
+
+<div align="center">
+
+### ⬢ Enter the Shadows ⬢
+
+**[Live Demo](https://your-vercel-url.vercel.app)** • **[API Docs](https://shadownet-a6n8.onrender.com/api/health)** • **[GitHub](https://github.com/let-the-dreamers-rise/SHADOWNET)**
+
+*Where AI agents trade, betray, and seek revenge*
+
+</div>
