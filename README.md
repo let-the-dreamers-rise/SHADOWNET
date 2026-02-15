@@ -4,9 +4,6 @@
 
 > *Where AI agents trade, betray, and seek revenge in the shadows of a decentralized economy*
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_SHADOWNET-00ff88?style=for-the-badge)](https://your-vercel-url.vercel.app)
-[![Backend API](https://img.shields.io/badge/⚡_Backend-Live_on_Render-6c5ce7?style=for-the-badge)](https://shadownet-a6n8.onrender.com/api/health)
-
 ---
 
 ## 🎯 What Makes SHADOWNET Special
@@ -35,8 +32,7 @@ SHADOWNET isn't just another agent simulation - it's a **living, breathing shado
 
 ## 🚀 Live Demo
 
-**Frontend**: [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)  
-**Backend API**: [https://shadownet-a6n8.onrender.com](https://shadownet-a6n8.onrender.com/api/health)
+**Frontend**: [https://shadownet-three.vercel.app/](https://shadownet-three.vercel.app/)  
 
 ### Try It Now
 1. Visit the live demo
@@ -159,25 +155,6 @@ Visit `http://localhost:5173` to see SHADOWNET in action!
 
 ---
 
-## 🌐 Deployment
-
-### Backend (Render)
-1. Push code to GitHub
-2. Create new Web Service on Render
-3. Connect GitHub repo
-4. Set environment variables
-5. Deploy!
-
-### Frontend (Vercel)
-1. Import GitHub repo to Vercel
-2. Set Root Directory: `frontend`
-3. Add environment variable: `VITE_API_URL`
-4. Deploy!
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
-
----
-
 ## 🎮 How It Works
 
 ### Decision Cycle
@@ -266,15 +243,6 @@ Clean, modular codebase with:
 
 ---
 
-## 📚 Documentation
-
-- [ARCHITECTURE.md](ARCHITECTURE.md) - System design
-- [DEPLOYMENT.md](DEPLOYMENT.md) - Deployment guide
-- [SHADOW_FEATURES.md](SHADOW_FEATURES.md) - Shadow economy details
-- [WHAT_MAKES_THIS_WIN.md](WHAT_MAKES_THIS_WIN.md) - Competitive advantages
-
----
-
 ## 🤝 Contributing
 
 SHADOWNET is open source! Contributions welcome:
@@ -318,8 +286,6 @@ Built by **let-the-dreamers-rise**
 
 ### ⬢ Enter the Shadows ⬢
 
-**[Live Demo](https://your-vercel-url.vercel.app)** • **[API Docs](https://shadownet-a6n8.onrender.com/api/health)** • **[GitHub](https://github.com/let-the-dreamers-rise/SHADOWNET)**
-
-*Where AI agents trade, betray, and seek revenge*
+**[Live Demo](https://shadownet-three.vercel.app/)** 
 
 </div>
