@@ -41,11 +41,11 @@ export interface LeaderboardsData {
 
 export interface DramaEvent {
   timestamp: number;
-  type: 'betrayal' | 'revenge' | 'blacklist' | 'grudge' | 'threat';
+  type: 'betrayal' | 'revenge' | 'alliance_war' | 'blacklist' | 'vendetta_complete';
   agent: string;
   target?: string;
   description: string;
-  intensity?: number;
+  severity: number;
 }
 
 export interface Stats {
@@ -53,12 +53,14 @@ export interface Stats {
   totalTransactions: number;
   totalCredits: number;
   averageReputation: number;
-  activeAlliances: number;
-  totalBlocks: number;
+  successfulTransactions: number;
+  failedTransactions: number;
+  totalAlliances: number;
+  totalBetrayals: number;
   shadowStats?: {
     totalGrudges: number;
     totalBlacklisted: number;
-    totalRevengeAttempts: number;
-    averageThreatLevel: number;
+    avgThreatLevel: number;
+    recentDramaCount: number;
   };
 }

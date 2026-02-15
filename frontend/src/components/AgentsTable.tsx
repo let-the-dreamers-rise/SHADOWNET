@@ -1,14 +1,5 @@
 import React from 'react';
-
-interface Agent {
-  id: string;
-  name: string;
-  personality: string;
-  role: string;
-  wallet: number;
-  reputation: number;
-  actionLog: any[];
-}
+import { Agent } from '../types';
 
 interface AgentsTableProps {
   agents: Agent[];

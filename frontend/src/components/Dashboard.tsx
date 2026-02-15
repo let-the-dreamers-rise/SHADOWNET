@@ -31,6 +31,10 @@ const Dashboard: React.FC = () => {
     totalCredits: 0,
     averageReputation: 0,
     totalTransactions: 0,
+    successfulTransactions: 0,
+    failedTransactions: 0,
+    totalAlliances: 0,
+    totalBetrayals: 0,
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
