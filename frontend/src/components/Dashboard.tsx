@@ -5,16 +5,7 @@ import ActivityFeed from './ActivityFeed';
 import Leaderboards from './Leaderboards';
 import DramaFeed from './DramaFeed';
 import { getAgents, getActivity, getLeaderboards, getStats, getDrama } from '../services/api';
-
-interface Agent {
-  id: string;
-  name: string;
-  personality: string;
-  role: string;
-  wallet: number;
-  reputation: number;
-  actionLog: any[];
-}
+import { Agent, LeaderboardsData, Stats, DramaEvent } from '../types';
 
 interface Transaction {
   id: string;
@@ -24,35 +15,6 @@ interface Transaction {
   action: string;
   success: boolean;
   timestamp: number;
-}
-
-interface LeaderboardsData {
-  richest: Agent[];
-  mostTrusted: Agent[];
-  mostActive: Agent[];
-}
-
-interface Stats {
-  totalAgents: number;
-  totalCredits: number;
-  averageReputation: number;
-  totalTransactions: number;
-  activeAlliances?: number;
-  shadowStats?: {
-    totalGrudges: number;
-    totalBlacklisted: number;
-    avgThreatLevel: number;
-    recentDramaCount: number;
-  };
-}
-
-interface DramaEvent {
-  type: 'betrayal' | 'revenge' | 'alliance_war' | 'blacklist' | 'vendetta_complete';
-  timestamp: number;
-  agent: string;
-  target?: string;
-  description: string;
-  severity: number;
 }
 
 const Dashboard: React.FC = () => {

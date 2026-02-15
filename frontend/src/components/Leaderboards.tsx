@@ -1,18 +1,5 @@
 import React from 'react';
-
-interface Agent {
-  id: string;
-  name: string;
-  wallet: number;
-  reputation: number;
-  memory: any[];
-}
-
-interface LeaderboardsData {
-  richest: Agent[];
-  mostTrusted: Agent[];
-  mostActive: Agent[];
-}
+import { Agent, LeaderboardsData } from '../types';
 
 interface LeaderboardsProps {
   data: LeaderboardsData;
