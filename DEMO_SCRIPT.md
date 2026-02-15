@@ -11,61 +11,65 @@
 
 > "Welcome to SHADOWNET - where 15 AI agents powered by Google Gemini don't just trade... they betray, hold grudges, and seek revenge."
 
-**[Point to live stats]**
+**[Point to top stats bar: Total Agents: 15, Total Credits: 14969, Avg Reputation: 53.7, Total Transactions: 15]**
 
-> "Right now, you're watching a living economy. Every decision you see is made by an LLM in real-time. No scripts. No predetermined actions. Just pure emergent behavior."
+> "Right now, you're watching a living economy. 15 agents, nearly 15,000 credits in circulation, and every decision you see is made by an LLM in real-time. No scripts. No predetermined actions. Just pure emergent behavior."
 
 ---
 
 ## 💰 The Economy (0:15 - 0:45) - 30 seconds
 
-**[Point to Agents Table]**
+**[Point to Agents Table on the right]**
 
-> "Meet our agents. Each has a unique personality - Ruthless, Cautious, Greedy, Loyal, Strategic. These aren't labels - they actually influence every decision the LLM makes."
+> "Meet our agents. Look at this table - Neon with 2393 credits, Onyx with 1136. Each has a unique personality shown here - trader, loyal, strategic. These aren't just labels - they actually influence every decision the LLM makes."
 
-**[Point to Activity Feed - watch for a transaction]**
+**[Point to Activity Feed at bottom left]**
 
-> "Watch this - there's a transaction happening right now. The agent just decided to make a risky deal. See that? It failed. 50% chance. That's real risk."
+> "Watch the Activity Feed - transactions happening in real-time. See these? Agents making trades, attempting risky deals. Some succeed, some fail. That's real risk, real consequences."
 
-**[Point to stats updating]**
+**[Point to Leaderboards: Richest Agents and Most Trusted]**
 
-> "Notice the stats updating in real-time. Total credits stays constant - we have perfect credit supply conservation. This is a real economy, not just random numbers."
+> "And here are the leaderboards - richest agents and most trusted. Notice how they're different? Being rich doesn't mean being trusted. That's emergent reputation at work."
 
 ---
 
 ## 🌑 The Shadow Economy (0:45 - 1:30) - 45 seconds
 
-**[Point to Drama Feed]**
+**[Point to Shadow Events panel (top left) and purple stats: Active Grudges: 0, Blacklisted: 0, Top Threat: 0]**
 
-> "But here's where it gets interesting. This is the Drama Feed - the dark side of SHADOWNET."
+> "But here's where it gets really interesting. See these purple stats? Active Grudges, Blacklisted agents, Top Threat level. This is the Shadow Economy - the dark side of SHADOWNET."
 
-**[If there's a betrayal event, point to it. If not, explain:]**
+**[Point to "No drama yet... the calm before the storm" message]**
 
-> "When an agent betrays an alliance partner, something special happens. The victim doesn't forget. A grudge is created with intensity up to 100. The betrayer gets blacklisted. Their threat level rises."
+> "Right now it says 'No drama yet... the calm before the storm.' That's because betrayals haven't happened yet. But when they do..."
 
-**[Point to Shadow Stats]**
+**[Explain the mechanics]**
 
-> "See these shadow stats? Active grudges, blacklisted agents, average threat level. This is the emotional layer of the economy."
+> "When an agent betrays an alliance partner, a grudge is created with intensity up to 100. The betrayer gets blacklisted - other agents refuse to deal with them. Their threat level rises. And here's the best part - there's a 30% chance the victim will attempt revenge with double the stakes."
 
-**[Explain revenge mechanic]**
+**[Point back to agents table]**
 
-> "And here's the best part - when an agent holds a grudge, there's a 30% chance they'll attempt revenge. With double the stakes. Watch for it in the activity feed - you'll see agents targeting their enemies."
+> "Look at these agents - they're all making decisions right now. Some are cautious, building trust. Others are ruthless, looking for opportunities to betray. The LLM is analyzing their personality, their relationships, their wallet balance, and deciding what to do next."
 
-**[Point to an agent with high threat level]**
+**[Point to Activity Feed]**
 
-> "This agent? Threat level 85. They've betrayed multiple partners. Other agents are less likely to trust them now. That's emergent reputation."
+> "When a betrayal happens, you'll see it here first. Then watch the shadow stats update. Grudges form. Blacklists grow. Threat levels spike. That's when the real drama begins."
 
 ---
 
 ## 🎯 The Impact (1:30 - 1:50) - 20 seconds
 
-**[Zoom out to full dashboard]**
+**[Gesture across the whole dashboard]**
 
-> "This is what autonomous AI agents can do. Not following scripts. Not executing predetermined logic. Actually thinking, adapting, and creating stories."
+> "This is what autonomous AI agents can do. Not following scripts. Not executing predetermined logic. Actually thinking, adapting, and creating emergent stories."
 
-**[Point to different sections]**
+**[Point to the stats updating]**
 
-> "Every transaction, every betrayal, every revenge attempt - all decided by Gemini 2.0 Flash analyzing the current state and making a choice based on personality."
+> "Every number you see updating - the wallet balances, the reputation scores, the transaction count - all driven by real LLM decisions. Gemini 2.0 Flash analyzing the full state and making choices based on personality and context."
+
+**[Point to the leaderboards]**
+
+> "And watch how the leaderboards shift. Agents rise and fall. Trust is earned and lost. Wealth changes hands. This is a living, breathing economy."
 
 ---
 
@@ -86,11 +90,13 @@
 Before starting your demo, make sure:
 
 - [ ] Dashboard is loaded and updating
-- [ ] At least 5-10 transactions visible in Activity Feed
-- [ ] Shadow stats show some grudges/blacklists (if not, explain it takes time)
-- [ ] Agents table is sorted by wallet
-- [ ] Stats panel shows correct totals
-- [ ] You know which agent has highest threat level
+- [ ] Top stats bar shows: Total Agents (15), Total Credits (~15000), Avg Reputation (~50-60), Total Transactions
+- [ ] Shadow stats visible: Active Grudges, Blacklisted, Top Threat (purple boxes)
+- [ ] Agents table on right shows all 15 agents with Name, Wallet, Reputation, Role, Personality
+- [ ] Activity Feed at bottom left shows recent transactions
+- [ ] Leaderboards show "Richest Agents" and "Most Trusted" 
+- [ ] Shadow Events panel shows "No drama yet..." or actual drama events
+- [ ] Stats are updating in real-time (watch for changes)
 - [ ] Browser is in fullscreen mode
 - [ ] No other tabs visible
 - [ ] Audio is clear if recording
@@ -112,9 +118,10 @@ Before starting your demo, make sure:
 4. **"Zero cost"** - Shows technical skill and resourcefulness
 
 ### Handling Issues
-- **No drama events yet?** "The shadow economy needs time to develop. Betrayals are rare but impactful."
-- **API rate limit?** "We have fallback logic - agents make safe decisions when the LLM is rate-limited."
-- **Slow transaction?** "Each decision takes 1-3 seconds as the LLM analyzes the full state."
+- **No drama events yet?** "The shadow economy needs time to develop. Betrayals are rare but impactful. Right now we're in the calm before the storm - agents are building trust and testing each other."
+- **Shadow stats all at zero?** "Perfect - this shows the economy is stable right now. But watch what happens when the first betrayal occurs - these numbers will spike."
+- **API rate limit?** "We have fallback logic - agents make safe decisions when the LLM is rate-limited. The economy keeps running."
+- **Slow transaction?** "Each decision takes 1-3 seconds as Gemini analyzes the full state - personality, wallet, relationships, and context."
 
 ### Body Language (if presenting live)
 - Point to specific elements on screen
@@ -161,11 +168,13 @@ If judges can interact with your demo:
 
 Watch for these during your demo:
 
-- ✨ **A betrayal happening live** - "There it is! Alliance broken!"
-- ⚔️ **A revenge attempt** - "See that? They remembered!"
-- 📈 **Threat level spiking** - "This agent is becoming dangerous"
-- 💰 **A big risky deal** - "200 credits on the line... and it failed!"
-- 🤝 **Alliance formation** - "Trust being built in real-time"
+- ✨ **Shadow stats at zero** - "The calm before the storm - betrayals are coming"
+- 💰 **Wallet balances changing** - "Watch Neon's balance - it just went up 100 credits!"
+- � **Reputation shifts** - "See how reputation changes with each transaction"
+- 🎯 **Activity Feed updates** - "There's a new transaction - agent just made a risky deal"
+- 📈 **Leaderboard changes** - "The richest agent just changed - that's emergent competition"
+- 🌑 **When drama appears** - "There it is! First betrayal! Watch the shadow stats spike!"
+- 🤝 **Different personalities** - "Neon is a trader, Onyx is loyal - see how they act differently"
 
 ---
 
